@@ -3,6 +3,21 @@
 This problem aims to seek the most optimal combination of action intervention methods to control the transmission, prevalence and health outcomes of malaria infection, should be distributed in a simulated human population. The solution using Reinforcement Learning, to identify sequential decisions that yield the largest accumulative reward for Malaria intervention measured in the population.
 
 
+#### Environment Info
+*State*
+
+Observations occur over a 5 year timeframe. The `env` gives five states `[1, 2, 3, 4, 5]`. State transition is independent of action selected.
+
+
+*Actions*
+
+The action is a tuple of possible continous intervention methods `[0, 1]` i.e., Insecticide Spraying and Distributing Nets
+
+
+*Reward*
+
+The reward is a function of the received Health Outcomes of the policy-selected intervention measures per unit cost. *`-r(inf, inf)`*
+
 #### Setup
 1. Install the Ushiriki library
 ```
@@ -45,7 +60,7 @@ for 5 years. This value should therefore be fixed
 
 
 
-*NOTE*: This challenges was originally part of [Indaba19](https://zindi.africa/competitions/ibm-malaria-challenge) and credentials would be needed to evaluate the policy actions. i.e `userID` and `baseuri` (See more in the [policy engine library](https://github.com/IBM/ushiriki-policy-engine-library))
+**NOTE**: This challenges was originally part of [Indaba19](https://zindi.africa/competitions/ibm-malaria-challenge) and credentials would be needed to evaluate the policy actions. i.e `userID` and `baseuri` (See more in the [policy engine library](https://github.com/IBM/ushiriki-policy-engine-library))
 
 Credential params
 `--userID`
